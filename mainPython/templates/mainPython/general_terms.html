@@ -1,0 +1,32 @@
+
+{% extends 'mainPython/layout.html' %}
+
+{% load static %}
+
+{% block contentPage %}
+
+{% for stat in statistic %}
+
+    <h2>{{ statistic.title }}</h2><br>
+
+    <p>{{ stat.content|safe }}</p><br>
+
+    {% for table in statistic.tables.all %}
+
+        <h4>{{ table.name }}</h4><br>
+
+            {{ table.data|safe }}
+        {% if table.image %}
+            <img src="{{ table.image.url }}" alt="{{ table.name }}" class="analise-image"/>
+        {% endif %}<br>
+    {% endfor %}
+
+{% endfor %}
+
+{% endblock %}
+
+
+
+{% block titlePage %}
+Общая статистика
+{% endblock %}

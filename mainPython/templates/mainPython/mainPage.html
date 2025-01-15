@@ -1,0 +1,16 @@
+{% extends 'mainPython/layout.html' %}
+{% load static %}
+
+{% block titlePage %}
+    {{ Main_Page_Content.titlePage }}
+{% endblock %}
+
+{% block titleContent %}
+    {{ Main_Page_Content.titleContent }}
+{% endblock %}
+
+{% block contentPage %}
+
+    {{ Main_Page_Content.contentPage|safe }}
+    <img src="{% static 'mainPython/img/profetion.jpg' %}" >
+{% endblock %}
