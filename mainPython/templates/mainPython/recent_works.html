@@ -1,0 +1,32 @@
+{% extends 'mainPython/layout.html' %}
+
+{% block contentPage %}
+    <h1 class="page-title">Последние вакансии Питонистов</h1>
+
+    <div class="vacancies-list">
+
+        {% for vacancy in vacancies %}
+            <div class="vacancy-card">
+
+                <h2 class="vacancy-title">
+                    <a href="{{ vacancy.vacancy_url }}" target="_blank">{{ vacancy.title }}</a>
+                </h2>
+
+                <div class="vacancy-info">
+                    <div><strong>Компания:</strong> {{ vacancy.company }}</div>
+
+                    <div><strong>Описание:</strong> {{ vacancy.description|safe }}</div>
+
+                    <div><strong>Навыки:</strong> {{ vacancy.skills }}</div>
+
+                    <div><strong>Оклад:</strong> {{ vacancy.salary }}</div>
+
+                    <div><strong>Регион:</strong> {{ vacancy.region }}</div>
+
+                    <div><strong>Дата публикации:</strong> {{ vacancy.published_at }}</div>
+                </div>
+            </div><br>
+            <hr> 
+        {% endfor %}
+    </div>
+{% endblock %}

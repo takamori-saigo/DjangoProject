@@ -54,6 +54,17 @@ main > div {
   padding-top: 500px;
 }
 
+main {
+  padding: 70px 20px 0;
+  display: block;
+}
+
+main > div.content {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px 0;
+}
+
 main h2 span {
   color: #BF7497;
 }
@@ -192,24 +203,24 @@ main small {
   transform: none;
 }
 
-
 footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: #212121;
-  color: #fff;
-  position: fixed;
+  position: fixed; /* Футер всегда находится внизу */
   bottom: 0;
-  width: 90%;
+  left: 0;
+  right: 0;
+  width: 100%; /* Футер занимает всю ширину окна */
+  background-color: #212121; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  text-align: center;
+  padding: 10px 0; /* Внутренние отступы сверху и снизу */
   font-size: 14px;
+  z-index: 10; /* Убедитесь, что футер сверху других элементов */
 }
 
-
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {

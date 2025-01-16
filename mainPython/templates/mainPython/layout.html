@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block titlePage %}{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'mainPython/css/style.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'mainPython/ico/python.ico' %}">
 </head>
 <body>
   <div class="page">
@@ -21,10 +22,10 @@
         <ul>
           <li><a href="{% url 'mainPage' %}">Главная страница</a></li>
           <li><a href="{% url 'generalStatistic' %}">Общая статистика</a></li>
-          <li><a href="#0">Востребованность</a></li>
-          <li><a href="#0">География</a></li>
-          <li><a href="#0">Навыки</a></li>
-          <li><a href="#0">Последние вакансии</a></li>
+          <li><a href="{% url 'demand' %}">Востребованность</a></li> 
+          <li><a href="{% url 'geography' %}">География</a></li>
+          <li><a href="{% url 'skills' %}">Навыки</a></li>  
+          <li><a href="{% url 'recent_jobs' %}">Последние вакансии</a></li>
         </ul>
       </div>
     </div>
